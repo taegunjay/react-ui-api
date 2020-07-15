@@ -1,0 +1,15 @@
+.Navbar{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width:100vw
+    
+}
+
+button{
+    width:110px;
+    background-color: grey;
+    color: white;
+    font-size: 22px;
+    border: none
+}
