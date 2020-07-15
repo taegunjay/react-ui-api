@@ -13,20 +13,33 @@ const options = {
 class App extends Component {
   constructor() {
     super();
+    this.click = this.click.bind(this);
     this.state = {
-      Jokes: []
-
+      Jokes: [],
+      currentTab: 0
     }//this.state
   }//constructor
-  render() {
-    return (
-      <div className="App">
-        <h1>Tabs wireflame</h1>
-        <Navbar />
-        <Jokes />
+  click(e) {
+    console.dir(e.target)
+    // this.setState({
+    //   currentTab: navNumber
+    // })
 
-      </div>
-    );//return
+  }
+  render() {
+    // console.log(this.state);
+    if (this.state.Jokes.length !== 0) {
+
+      return (
+        <div className="App">
+          <h1 className="Header">Tabs wireflame</h1>
+          <Navbar click={this.click} />
+          <Jokes Tabs={this.state.currentTab} Jokes={this.state.Jokes} />
+
+        </div>
+      );//return
+    }
+    else { return null }
   }//render
   componentDidMount() {
 
@@ -37,12 +50,14 @@ class App extends Component {
       })//then
 
       .then(res => {
-        console.log(res.value[0].joke);
+        // console.log(res.value);
+
         // this.button = (e) => {
         this.setState(
           {
-            Jokes: res.value[0].joke
-          }//setStates
+            Jokes: res.value
+          }
+          //setStates
         )//this.setStates
       }//then(res)
         // }//button
