@@ -19,25 +19,38 @@ class App extends Component {
       currentTab: 0
     }//this.state
   }//constructor
+
   click(e) {
-    console.dir(e.target)
-    // this.setState({
-    //   currentTab: navNumber
-    // })
+    console.log(e.target.innerHTML)
+    let str = e.target.innerHTML;
+    let grab = str.slice(-1);
+
+
+    // console.dir(e.target)
+    this.setState({
+      currentTab: grab
+    })
 
   }
+
   render() {
-    // console.log(this.state);
+
     if (this.state.Jokes.length !== 0) {
 
       return (
         <div className="App">
           <h1 className="Header">Tabs wireflame</h1>
-          <Navbar click={this.click} />
-          <Jokes Tabs={this.state.currentTab} Jokes={this.state.Jokes} />
+          <h1 className="container">
+            <Navbar click={this.click} />
+            <Jokes Tabs={this.state.currentTab} Jokes={this.state.Jokes} />
+          </h1>
+
+
+
 
         </div>
       );//return
+
     }
     else { return null }
   }//render

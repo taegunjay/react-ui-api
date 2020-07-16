@@ -3,10 +3,13 @@ import './Jokes.css';
 // import Jokes from './Jokes1.js';
 
 function Jokes(props) {
-    console.log(props);
+    console.log(props.Jokes);
+    console.log(props.Tabs);
+    console.log(props.Jokes[props.Tabs]);
+    console.log(props.Jokes[props.Tabs].joke);
     return (
-        <div>
-            <h1>{props.Jokes[props.Tabs].joke}</h1>
+        <div className="containerJoke">
+            <h1 className="Printing">{props.Jokes[props.Tabs].joke}</h1>
         </div>
     )
 

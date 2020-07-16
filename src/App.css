@@ -13,8 +13,21 @@
   width: 100vw;
   height: 30px;
   position: relative;
+  margin-bottom: 200px;
   
   
+}
+
+.container{
+  display: flex;
+  border: 1px solid black;
+  
+  flex-direction: column;
+  
+  
+
+ 
+
 }
 
 .App-logo {

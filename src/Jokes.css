@@ -1,0 +1,18 @@
+h1{
+    width: 645px;
+    font-size: 30px;
+    /* padding: 1px solid black;
+    border: 2px solid black; */
+    margin-bottom: 0;
+
+}
+.containerJoke{
+    margin: auto;
+}
+
+.Printing{
+    height: 180px;
+    margin-top: 100px;
+    margin: auto;
+}
+
